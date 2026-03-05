@@ -1,0 +1,72 @@
+---
+description: Component structure, file organization, and React patterns for the portfolio site
+globs: src/components/**/*.tsx, src/app/**/*.tsx
+alwaysApply: false
+---
+
+# Component Architecture
+
+## Directory Structure
+
+Organize components under `src/components/` using category-based subdirectories:
+
+```
+src/components/
+  ui/          # Atomic primitives: Button, Badge, Card, Icon wrappers
+  layout/      # Structural shells: Header, Footer, Section, Container
+  sections/    # Page-level content blocks: Hero, AboutSection, ProjectGrid, ContactForm
+```
+
+## File Conventions
+
+- One component per file. Name the file after the component in PascalCase (e.g., `Header.tsx`).
+- For components that grow beyond a single file, promote to a folder:
+  ```
+  Header/
+    index.tsx       # Main component (re-exports)
+    HeaderNav.tsx   # Sub-component
+    types.ts        # Shared types/interfaces
+  ```
+- Colocate component-specific types in a `types.ts` file when they are shared across sub-components.
+- Test files live next to the component: `Header.test.tsx`.
+
+## Component Patterns
+
+### Server vs Client Components
+
+- **Default to Server Components.** They render on the server with zero client JS.
+- Add `"use client"` only when the component requires:
+  - Event handlers (`onClick`, `onChange`, etc.)
+  - React hooks (`useState`, `useEffect`, `useRef`, etc.)
+  - Browser-only APIs (`window`, `document`, `IntersectionObserver`, etc.)
+- Keep client boundaries as small as possible — extract interactive parts into leaf client components.
+
+### Props & Types
+
+- Use `interface` for component prop definitions (better for extending and declaration merging).
+- Name the interface `{ComponentName}Props`.
+- Destructure props in the function signature.
+
+```tsx
+interface ButtonProps {
+  variant?: "primary" | "outline";
+  children: React.ReactNode;
+}
+
+export function Button({ variant = "primary", children }: ButtonProps) {
+  // ...
+}
+```
+
+### Composition
+
+- Prefer composition over prop drilling. Use `children` and slot patterns.
+- For section components, accept a `className` prop and merge it with internal classes using template literals or `clsx`.
+
+## Naming Conventions
+
+- Components: `PascalCase`
+- Hooks: `camelCase` prefixed with `use` (e.g., `useMobileMenu`)
+- Utility functions: `camelCase`
+- Constants: `UPPER_SNAKE_CASE`
+- CSS custom properties: `--kebab-case`
