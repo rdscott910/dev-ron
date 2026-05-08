@@ -1,20 +1,30 @@
 # Portfolio Website Roadmap
 
-## Phase 1 — Foundation (Current)
+## Current Source Of Truth
+
+The MVP roadmap now lives in `.cursor/plans/roadmap-to-mvp/`.
+
+Start with `.cursor/plans/roadmap-to-mvp/00-readme.md`, then follow the scope, phase roadmap, implementation slices, verification rubric, and backlog docs in that directory.
+
+This file is retained as historical planning context for the first single-page portfolio pass. Do not treat it as the active MVP orchestration plan.
+
+## Phase 1 — Foundation (Complete)
 
 - [x] Scaffold Next.js 15 with TypeScript, Tailwind CSS v4, App Router
 - [x] Establish `.cursor/` AI collaboration structure (rules, plans, prompt_templates)
 - [x] Build base layout shell: responsive Header with navigation + Footer
 - [x] Create minimal hero placeholder on the home page
-- [ ] Initial Git commit with clean project state
+- [x] Initial Git commit with clean project state
 
-## Phase 2 — Content Sections
+## Phase 2 — Content Sections (Current)
 
-- [ ] **Hero section**: headline, tagline, call-to-action buttons (Resume / Contact)
-- [ ] **About section**: professional summary, tech stack icons, profile photo
-- [ ] **Projects grid**: card-based layout with thumbnail, title, description, tech tags, links
-- [ ] **Contact section**: form (name, email, message) with client-side validation
-- [ ] Create reusable UI primitives: Button, Card, Badge, SectionHeading
+- [x] Initialize shadcn/ui (CLI init, theming CSS variables, `cn` utility)
+- [x] Add shadcn primitives: Button, Badge, Card, Input, Textarea, Label
+- [x] Create custom `SectionHeading` component (not provided by shadcn)
+- [x] **Hero section**: headline, tagline, call-to-action buttons (Resume / Contact)
+- [x] **About section**: professional summary, tech stack badges, profile photo
+- [x] **Projects grid**: card-based layout with Card, Badge, tech tags, links
+- [ ] **Contact section**: form (name, email, message) with client-side validation using shadcn form primitives
 
 ## Phase 3 — Data & Integrations
 

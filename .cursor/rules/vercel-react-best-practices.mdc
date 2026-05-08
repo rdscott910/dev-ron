@@ -1,0 +1,20 @@
+---
+description: Triggers the Vercel React best practices skill when working on React/Next.js files
+globs: src/**/*.tsx, src/**/*.ts
+alwaysApply: false
+---
+
+# Vercel React Best Practices
+
+Before writing, reviewing, or refactoring React/Next.js code in this project, read and follow the Vercel React best practices skill located at:
+
+```
+/Users/ronnie/.cursor/plugins/cache/cursor-public/vercel/95857183947fcc2a478f817c1e5d24ec054b21a9/skills/vercel-react-best-practices/SKILL.md
+```
+
+Pay particular attention to the CRITICAL and HIGH priority categories:
+- Eliminating async waterfalls (use Promise.all, defer awaits, Suspense boundaries)
+- Bundle size optimization (avoid barrel imports, use next/dynamic, defer third-party scripts)
+- Server-side performance (React.cache, minimize client serialization, parallel fetching)
+
+When fetching detailed rule guidance, use the URLs documented in the skill file.
