@@ -5,6 +5,8 @@ const FOOTER_NAV = [
   { href: "/blog", label: "Blog" },
   { href: "/about", label: "About" },
   { href: "/resume", label: "Resume" },
+  { href: "/now", label: "Now" },
+  { href: "/uses", label: "Uses" },
   { href: "/contact", label: "Contact" },
 ] as const;
 
