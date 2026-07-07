@@ -1,4 +1,5 @@
-import { Github, ExternalLink } from "lucide-react";
+import Link from "next/link";
+import { Github, ExternalLink, BookOpen } from "lucide-react";
 
 import { getAllProjects } from "@/lib/projects";
 import { Badge } from "@/components/ui/badge";
@@ -99,6 +100,14 @@ export function Projects() {
                     <ExternalLink className="mr-1.5 h-3.5 w-3.5" />
                     Live Demo
                   </a>
+                </Button>
+              ) : null}
+              {project.links.caseStudy ? (
+                <Button variant="outline" size="sm" asChild>
+                  <Link href={project.links.caseStudy}>
+                    <BookOpen className="mr-1.5 h-3.5 w-3.5" />
+                    Case Study
+                  </Link>
                 </Button>
               ) : null}
             </CardFooter>

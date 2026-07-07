@@ -29,6 +29,7 @@ export const PROJECTS: Project[] = [
     status: "in-progress",
     links: {
       github: "https://github.com/rdscott910/ai-orchestration-server",
+      caseStudy: "/methodology",
     },
     featured: true,
   },
