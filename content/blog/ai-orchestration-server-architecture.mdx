@@ -1,0 +1,50 @@
+---
+title: "Building an AI Orchestration Server: Architecture and Early Lessons"
+slug: ai-orchestration-server-architecture
+description: "An inside look at designing a unidirectional AI-assisted workflow pipeline—what worked, what didn't, and where the methodology is heading."
+date: "2026-07-07"
+tags: ["agentic-orchestration", "typescript", "architecture"]
+series: "Agentic Orchestration"
+status: draft
+---
+
+*Draft scaffold — each section below has a prompt describing what belongs
+there. Replace the prompts with real prose, then set `status: published`.*
+
+## The problem I kept hitting
+
+Prompt: describe the context-alignment problem in your own words — what broke
+when coordinating AI agents across tools and sessions, and the moment you
+decided ad-hoc prompting wasn't enough.
+
+## Design constraints
+
+Prompt: why unidirectional? Cover the Telegram → Server → sync-dir flow
+decision, why strict FIFO queueing (concurrency = 1) mattered for git safety,
+and what you deliberately left out.
+
+## The architecture
+
+Prompt: walk the reader through the pieces — bot auth guard, the queue, the
+observer/executor skills split, the scraper and sync services — and how they
+compose. A diagram would work well here.
+
+```
+Telegram (Input) ──► Server (Logic) ──► SYNC_DIR (Output)
+```
+
+## Security decisions worth stealing
+
+Prompt: the defense table from the README in narrative form — execFile over
+shell, path-traversal-safe writes, allowlists, token caps — and which one
+earned its keep first.
+
+## What I got wrong
+
+Prompt: the honest part — early lessons, over-engineering you walked back,
+anything the architecture audit surfaced.
+
+## Where the methodology goes next
+
+Prompt: connect this to the broader methodology (rules, MCP, truth-stack
+docs) and what you're building toward. Link to /methodology.

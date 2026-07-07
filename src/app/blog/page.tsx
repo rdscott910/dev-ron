@@ -63,6 +63,11 @@ export default function BlogPage() {
                   >
                     {STATUS_LABELS[post.status]}
                   </span>
+                  {post.series && (
+                    <span className="text-xs font-medium text-muted-foreground">
+                      {post.series}
+                    </span>
+                  )}
                 </div>
                 <CardTitle className="text-lg leading-snug">
                   {isRoutable(post) ? (
