@@ -23,11 +23,11 @@ const STATUS_LABELS: Record<PostStatus, string> = {
   published: "Published",
 };
 
+// Solarized-adjacent tints; text colors verified >= 4.5:1 on the cream background.
 const STATUS_STYLES: Record<PostStatus, string> = {
-  draft: "bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300",
-  idea: "bg-stone-100 text-stone-700 dark:bg-stone-800 dark:text-stone-300",
-  published:
-    "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300",
+  draft: "bg-[#b58900]/15 text-[#6b5300]",
+  idea: "bg-[#93a1a1]/20 text-[#4f636b]",
+  published: "bg-[#859900]/15 text-[#4d5900]",
 };
 
 export default function BlogPage() {

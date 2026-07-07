@@ -28,7 +28,7 @@ export function Header() {
       >
         <Link
           href="/"
-          className="text-lg font-bold tracking-tight text-foreground"
+          className="font-display text-lg font-bold tracking-tight text-foreground"
         >
           dev-ron
         </Link>
