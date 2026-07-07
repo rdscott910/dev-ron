@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 
-import { getAllPosts, type PostStatus } from "@/lib/blog";
+import Link from "next/link";
+
+import { getListedPosts, isRoutable, type PostStatus } from "@/lib/blog";
 import { Badge } from "@/components/ui/badge";
 import {
   Card,
@@ -31,7 +33,7 @@ const STATUS_STYLES: Record<PostStatus, string> = {
 };
 
 export default function BlogPage() {
-  const posts = getAllPosts();
+  const posts = getListedPosts();
 
   return (
     <section
@@ -63,7 +65,16 @@ export default function BlogPage() {
                   </span>
                 </div>
                 <CardTitle className="text-lg leading-snug">
-                  {post.title}
+                  {isRoutable(post) ? (
+                    <Link
+                      href={`/blog/${post.slug}`}
+                      className="transition-colors hover:text-foreground/70 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-foreground"
+                    >
+                      {post.title}
+                    </Link>
+                  ) : (
+                    post.title
+                  )}
                 </CardTitle>
                 <CardDescription className="mt-1 leading-relaxed">
                   {post.description}

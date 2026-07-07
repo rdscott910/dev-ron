@@ -136,6 +136,28 @@
   }
 }
 
+/* sugar-high syntax token colors, mapped to Solarized accents */
+:root {
+  --sh-class: #b58900;
+  --sh-identifier: #073642;
+  --sh-sign: #657b83;
+  --sh-property: #268bd2;
+  --sh-entity: #2aa198;
+  --sh-jsxliterals: #6c71c4;
+  --sh-string: #859900;
+  --sh-keyword: #cb4b16;
+  --sh-comment: #93a1a1;
+}
+
+/* Inline code (block code inside <pre> is styled by the pre wrapper) */
+:not(pre) > code {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.875em;
+  background: var(--muted);
+  border-radius: 0.25rem;
+  padding: 0.125rem 0.375rem;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

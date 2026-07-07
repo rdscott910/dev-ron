@@ -1,0 +1,39 @@
+---
+title: "Sample Post: MDX Pipeline Scaffold"
+slug: sample-post
+description: "A scaffold post demonstrating the MDX rendering pipeline. Kept in draft status — visible in dev preview only, never in production."
+date: "2026-07-07"
+tags: ["meta", "scaffold"]
+series: "Meta"
+status: draft
+hidden: true
+---
+
+This is a scaffold post proving out the MDX pipeline. It stays in `draft`
+status, which means it renders at `/blog/sample-post` during local
+development only — production never builds a route for it.
+
+## Formatting checks
+
+Body text renders in Geist Sans, while headings above use the Fraunces
+display serif. Inline code like `getRoutablePosts()` gets a subtle tinted
+background.
+
+### Code blocks
+
+```ts
+export function greet(name: string): string {
+  // Syntax highlighting via sugar-high
+  const message = `Hello, ${name}`;
+  return message;
+}
+```
+
+### Lists and quotes
+
+- Draft posts: dev-only preview routes
+- Published posts: static routes in production
+- Idea/planned posts: cards only, never linked
+
+> Replace this file with a real first post, set `status: published`, and
+> the route goes live on the next deploy.
