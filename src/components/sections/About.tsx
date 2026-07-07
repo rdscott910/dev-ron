@@ -133,16 +133,41 @@ export function About() {
               Resume <span className="text-xs opacity-60">— timeline & PDF</span>
             </Link>
           </li>
-          {["Case Studies", "Writing Samples"].map((item) => (
-            <li
-              key={item}
-              className="rounded-lg border border-border bg-card px-4 py-3 text-sm text-muted-foreground"
+          <li>
+            <Link
+              href="/methodology"
+              className="block rounded-lg border border-border bg-card px-4 py-3 text-sm font-medium text-foreground transition-colors hover:border-foreground/30 hover:bg-muted/50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
             >
-              {item}{" "}
-              <span className="text-xs opacity-60">— coming soon</span>
-            </li>
-          ))}
+              Case Study{" "}
+              <span className="text-xs opacity-60">— AI orchestration</span>
+            </Link>
+          </li>
+          <li className="rounded-lg border border-border bg-card px-4 py-3 text-sm text-muted-foreground">
+            Writing Samples{" "}
+            <span className="text-xs opacity-60">— coming soon</span>
+          </li>
         </ul>
+      </div>
+
+      {/* Music corner */}
+      <div className="mt-8 rounded-xl border border-border bg-muted/40 px-6 py-8">
+        <h2 className="mb-1 text-sm font-medium tracking-widest text-muted-foreground uppercase">
+          The music corner
+        </h2>
+        <p className="mb-6 text-sm leading-relaxed text-muted-foreground">
+          Before software, there was music — I studied music education at
+          Appalachian State and UNC Pembroke, and I&apos;m still a musician
+          today. That creative discipline shapes how I build: rhythm, structure,
+          and knowing when a piece is finished.
+        </p>
+        <div className="rounded-lg border border-border bg-card px-4 py-3">
+          <p className="text-sm text-muted-foreground">
+            Recordings and projects coming soon{" "}
+            <span className="text-xs opacity-60">
+              — this corner is just warming up
+            </span>
+          </p>
+        </div>
       </div>
     </section>
   );
