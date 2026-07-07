@@ -107,3 +107,14 @@ User dashboard steps required before delivery works:
 3. Resend dashboard → API Keys: create a key; put it in `.env.local` as `RESEND_API_KEY` and add the same variable in Vercel project settings (Production).
 
 Once forwarding is confirmed working, `ronnie@dev-ron.com` may be displayed publicly on the contact page.
+
+## Placeholder Swap-List (Phase 9)
+
+Placeholders shipped in July 2026 awaiting real content from the user. Each entry names the location and what replaces it:
+
+1. `content/blog/ai-orchestration-server-architecture.mdx` — draft scaffold with section prompts. Replace prompts with real prose, set `status: published` to go live (dev preview at `/blog/ai-orchestration-server-architecture`).
+2. `src/app/now/page.tsx` — "Reading" and "Listening" sections are Planned blocks. Replace with real items and bump `LAST_UPDATED`.
+3. `src/app/uses/page.tsx` — "Hardware & desk" section is a Planned block. Replace with real hardware details.
+4. `src/app/methodology/page.tsx` — "Deep dives" list is Coming Soon. Replace with real architecture walkthrough, changelog, and site case study as they're written.
+5. `src/components/sections/About.tsx` — music corner "Recordings and projects coming soon" block. Replace with real links/embeds when provided.
+6. `src/components/sections/About.tsx` — "Writing Samples — coming soon" artifact card. Point at published posts once they exist.

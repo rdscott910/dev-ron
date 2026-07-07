@@ -2,7 +2,7 @@
 
 These ideas are valuable, but they should not block the MVP unless the user explicitly promotes them.
 
-Note: many items below were promoted into the post-MVP roadmap in July 2026. See `08-post-mvp-roadmap.md` and `09-post-mvp-slices.md` for the active plan; items remaining here are still unscheduled.
+Note: the post-MVP roadmap (`08-post-mvp-roadmap.md`) completed in July 2026. Items remaining here are unscheduled future work: RSS feed, newsletter signup, embedded apps gallery, dark mode toggle, GitHub API integration, project screenshots, search/tag archives, calendar booking, structured data, and Lighthouse performance budget.
 
 ## Professional Artifacts
 

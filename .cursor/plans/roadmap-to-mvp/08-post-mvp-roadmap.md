@@ -1,5 +1,7 @@
 # Post-MVP Roadmap
 
+**Status: complete as of July 2026.** All phases (5–9) shipped. Phase 9 shipped placeholder-first; see the Placeholder Swap-List in `07-user-context.md` for content that still needs the user's real copy. Remaining unscheduled ideas live in `06-backlog.md`.
+
 The MVP (Phases 0–4) is complete: five routes, static content modules, metadata/SEO, and passing lint/build. This roadmap covers everything from repo safety through launch, contact delivery, visual identity, and content expansion.
 
 Decisions locked in by the user (see `07-user-context.md`):
