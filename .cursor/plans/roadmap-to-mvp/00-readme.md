@@ -12,17 +12,21 @@ Agents should read this file first, then open the most relevant supporting doc b
 4. `04-implementation-slices.md` breaks phases into manageable implementation slices.
 5. `05-verification-rubric.md` defines the checks each slice must pass.
 6. `06-backlog.md` captures useful ideas that should not block the MVP.
+7. `07-user-context.md` captures user-provided identity, content, project, style, and privacy guidance.
+8. `08-post-mvp-roadmap.md` defines Phases 5–9: repo safety, deploy/domain, contact/resume, visual identity, and content expansion.
+9. `09-post-mvp-slices.md` breaks Phases 5–9 into implementation slices.
 
 ## Agent Workflow
 
 1. Read the MVP scope.
-2. Pick one implementation slice.
-3. Check the relevant Cursor rules in `.cursor/rules/`.
-4. Inspect existing code before editing.
-5. Implement only the selected slice.
-6. Run the verification steps that apply.
-7. Update progress notes in the roadmap docs when the slice changes the plan.
-8. Summarize completed work, verification, and open gaps.
+2. Read the user context before writing public-facing content.
+3. Pick one implementation slice.
+4. Check the relevant Cursor rules in `.cursor/rules/`.
+5. Inspect existing code before editing.
+6. Implement only the selected slice.
+7. Run the verification steps that apply.
+8. Update progress notes in the roadmap docs when the slice changes the plan.
+9. Summarize completed work, verification, and open gaps.
 
 ## Current Product Goal
 

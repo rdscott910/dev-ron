@@ -35,7 +35,7 @@ Purpose: establish the publishing surface.
 Minimum content:
 
 - Blog index route.
-- Placeholder posts or a clear "writing coming soon" state.
+- Draft-style article cards around planned writing topics.
 - A provisional content model for title, description, date, tags, and status.
 
 ### About
@@ -55,10 +55,11 @@ Purpose: make it easy to reach Ronnie.
 
 Minimum content:
 
-- Email or mailto link.
+- Privacy-first contact option that does not expose a personal Gmail address.
 - GitHub and LinkedIn links.
-- Optional non-submitting form or static form shell.
+- Optional contact form shell if no delivery provider is configured yet.
 - Clear expectation for response or collaboration topics.
+- No phone number.
 
 ## Non-Goals For MVP
 

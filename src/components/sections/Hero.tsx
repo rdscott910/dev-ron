@@ -10,7 +10,7 @@ export function Hero() {
       className="mx-auto flex max-w-5xl flex-col items-center justify-center px-6 py-32 text-center"
     >
       <p className="mb-4 text-sm font-medium tracking-widest text-muted-foreground uppercase">
-        Software Engineer
+        Full-Stack Software Engineer
       </p>
       <h1
         id="hero-heading"
@@ -19,15 +19,16 @@ export function Hero() {
         Hi, I&apos;m Ronnie
       </h1>
       <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-        I build performant, accessible web applications and love turning complex
-        problems into clean, elegant solutions.
+        I build practical, accessible software — full-stack web applications,
+        developer tooling, and AI-assisted workflows that are fast, reliable,
+        and a joy to use.
       </p>
       <div className="mt-10 flex flex-col gap-4 sm:flex-row">
         <Button size="lg" className="rounded-full" asChild>
-          <Link href="/resume.pdf">Resume</Link>
+          <Link href="/projects">View Projects</Link>
         </Button>
         <Button variant="outline" size="lg" className="rounded-full" asChild>
-          <Link href="#contact">Get in Touch</Link>
+          <Link href="/contact">Get in Touch</Link>
         </Button>
       </div>
     </section>

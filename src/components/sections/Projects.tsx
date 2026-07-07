@@ -1,5 +1,6 @@
 import { Github, ExternalLink } from "lucide-react";
 
+import { getAllProjects } from "@/lib/projects";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -12,42 +13,16 @@ import {
 } from "@/components/ui/card";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
-interface Project {
-  title: string;
-  description: string;
-  tech: string[];
-  github: string;
-  live: string;
-}
-
-const PROJECTS: Project[] = [
-  {
-    title: "Cloud Dashboard",
-    description:
-      "A real-time monitoring dashboard for cloud infrastructure with interactive charts and alerting.",
-    tech: ["TypeScript", "React", "Next.js", "Tailwind CSS"],
-    github: "#",
-    live: "#",
-  },
-  {
-    title: "Task Flow API",
-    description:
-      "RESTful API for project management with role-based access control and webhook integrations.",
-    tech: ["Node.js", "Express", "PostgreSQL", "Docker"],
-    github: "#",
-    live: "#",
-  },
-  {
-    title: "DevLog",
-    description:
-      "A minimal blogging platform for developers with MDX support, syntax highlighting, and RSS feeds.",
-    tech: ["Next.js", "MDX", "Tailwind CSS", "Vercel"],
-    github: "#",
-    live: "#",
-  },
-];
+const STATUS_LABELS: Record<string, string> = {
+  "in-progress": "In Progress",
+  shipped: "Shipped",
+  concept: "Concept",
+  archived: "Archived",
+};
 
 export function Projects() {
+  const projects = getAllProjects();
+
   return (
     <section
       id="projects"
@@ -61,18 +36,35 @@ export function Projects() {
         className="mb-12"
       />
 
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {PROJECTS.map((project) => (
-          <Card key={project.title} className="flex flex-col">
+      <div className="grid gap-6 md:grid-cols-2">
+        {projects.map((project) => (
+          <Card key={project.slug} className="flex flex-col">
             <CardHeader>
+              <div className="mb-1">
+                <span className="text-xs font-medium text-muted-foreground">
+                  {STATUS_LABELS[project.status] ?? project.status}
+                </span>
+              </div>
               <CardTitle>{project.title}</CardTitle>
-              <CardDescription>{project.description}</CardDescription>
+              <CardDescription className="leading-relaxed">
+                {project.summary}
+              </CardDescription>
+              <p className="pt-1 text-xs leading-relaxed text-muted-foreground/70">
+                <span className="font-medium text-muted-foreground">
+                  Problem:{" "}
+                </span>
+                {project.problem}
+              </p>
             </CardHeader>
 
-            <CardContent className="flex-1">
-              <div className="flex flex-wrap gap-2">
-                {project.tech.map((tech) => (
-                  <Badge key={tech} variant="secondary">
+            <CardContent className="flex-1 space-y-3">
+              <p className="text-sm text-muted-foreground">
+                <span className="font-medium text-foreground/70">Role: </span>
+                {project.role}
+              </p>
+              <div className="flex flex-wrap gap-1.5">
+                {project.stack.map((tech) => (
+                  <Badge key={tech} variant="secondary" className="text-xs">
                     {tech}
                   </Badge>
                 ))}
@@ -80,26 +72,35 @@ export function Projects() {
             </CardContent>
 
             <CardFooter className="gap-2">
-              <Button variant="outline" size="sm" asChild>
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Github />
+              {project.links.github ? (
+                <Button variant="outline" size="sm" asChild>
+                  <a
+                    href={project.links.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Github className="mr-1.5 h-3.5 w-3.5" />
+                    GitHub
+                  </a>
+                </Button>
+              ) : (
+                <Button variant="outline" size="sm" disabled>
+                  <Github className="mr-1.5 h-3.5 w-3.5" />
                   GitHub
-                </a>
-              </Button>
-              <Button variant="outline" size="sm" asChild>
-                <a
-                  href={project.live}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <ExternalLink />
-                  Live Demo
-                </a>
-              </Button>
+                </Button>
+              )}
+              {project.links.live ? (
+                <Button variant="outline" size="sm" asChild>
+                  <a
+                    href={project.links.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <ExternalLink className="mr-1.5 h-3.5 w-3.5" />
+                    Live Demo
+                  </a>
+                </Button>
+              ) : null}
             </CardFooter>
           </Card>
         ))}

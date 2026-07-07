@@ -1,12 +1,12 @@
 # Content Model
 
-Final content is TBD. Until then, agents should use structured placeholders that are easy to replace.
+Some content is now defined in `07-user-context.md`. Agents should use that file before writing public-facing copy. Anything still TBD should use structured placeholders that are easy to replace.
 
 ## Site Positioning
 
 Working positioning:
 
-> Ronnie is a software engineer building performant, accessible web applications and useful developer-facing tools.
+> Ronnie is a full-stack software engineer building practical, accessible software, AI-assisted workflows, and useful developer-facing tools.
 
 Agents may refine wording for clarity, but should avoid inventing detailed career claims, employers, credentials, or metrics that are not provided.
 
@@ -40,7 +40,7 @@ Project detail pages are not required for MVP.
 
 ## Blog Model
 
-Use placeholder metadata for MVP. Do not add MDX or a CMS until that work is promoted from the backlog.
+Use draft-style article cards for MVP. Do not add MDX or a CMS until that work is promoted from the backlog.
 
 Recommended fields:
 
@@ -52,6 +52,16 @@ Recommended fields:
 - `status`: `idea`, `draft`, or `published`.
 
 Blog post detail pages are optional for MVP. The required surface is the blog index.
+
+For MVP, article cards should look like intentional drafts or planned essays, not broken placeholders. Use `draft` or `idea` status labels and avoid linking to missing post pages.
+
+Known topic direction:
+
+- Agentic orchestration.
+- AI headlines and commentary.
+- AI-assisted development workflows.
+- Context engineering and persistent rule systems.
+- Tech reviews.
 
 ## About Content
 
@@ -65,13 +75,32 @@ Suggested blocks:
 
 Avoid over-specific claims until the user provides final content.
 
+Use `ronnie-scott-resume.pdf` as the current resume source for professional history, skills, selected project experience, leadership, writing, community, education, and certifications. Do not publish the phone number anywhere on the website.
+
 ## Contact Content
 
 Suggested blocks:
 
-- Direct email or mailto CTA.
+- Privacy-first contact CTA.
 - GitHub and LinkedIn links.
 - Collaboration topics, such as web apps, developer tools, consulting, or technical writing.
 - Optional form shell if no backend is wired yet.
 
-If a form is present before backend handling exists, make its limitations clear in the UI or keep the mailto CTA primary.
+Preferred MVP direction:
+
+- Do not publish a personal Gmail address.
+- Do not publish a phone number anywhere on the website.
+- Prefer a contact page that routes visitors to LinkedIn, GitHub, and a future professional email alias.
+- If using email, use a dedicated public alias such as `hello@<domain>`, `contact@<domain>`, or `ronnie@<domain>` after a domain is chosen.
+- If a form is present before backend handling exists, make its limitations clear in the UI and do not imply messages are being delivered.
+
+Good post-MVP contact delivery options:
+
+- Professional domain email alias forwarded to a private inbox.
+- Vercel/Next.js server action using a transactional email provider such as Resend.
+- Managed form provider with spam protection.
+- Calendar link only after the user explicitly approves it.
+
+Approved LinkedIn URL: `https://www.linkedin.com/in/ronnie-d-scott`
+
+Confirm preferred public email alias before publishing an email address prominently.

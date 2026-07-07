@@ -90,12 +90,13 @@ Likely files:
 Tasks:
 
 - Add placeholder blog metadata.
-- Render blog index cards or a structured coming-soon state.
+- Render draft-style article cards for planned writing topics.
 - Optionally show a small writing preview on the home page.
 
 Acceptance criteria:
 
 - Blog page has a clear content model.
+- Blog cards use `draft` or `idea` status labels and do not link to missing post pages.
 - No MDX, CMS, or dynamic post routing is introduced unless explicitly approved.
 
 ## Slice 3.1: Home Page MVP
@@ -161,13 +162,13 @@ Likely files:
 
 Tasks:
 
-- Render placeholder posts or a polished writing-coming-soon state.
+- Render draft-style article cards for planned writing topics.
 - Use tags and status values from the content model.
 
 Acceptance criteria:
 
 - Blog page establishes the future publishing direction.
-- It does not imply published content that does not exist.
+- It does not imply published content that does not exist or link to missing posts.
 
 ## Slice 3.5: Contact Page MVP
 
@@ -178,13 +179,15 @@ Likely files:
 
 Tasks:
 
-- Provide direct contact methods.
+- Provide privacy-first contact methods.
 - Add collaboration prompts or topics.
-- If adding a form shell, make mailto the primary working path until backend handling exists.
+- Prefer LinkedIn, GitHub, and a future professional email alias over exposing a personal email.
+- If adding a form shell, clearly mark it as not wired until backend handling exists.
 
 Acceptance criteria:
 
-- Visitors can contact Ronnie without JavaScript.
+- Visitors can reach Ronnie through approved public channels.
+- No phone number or personal Gmail address appears on the website.
 - Any form UI has labels, focus states, and no misleading submit behavior.
 
 ## Slice 4.1: Metadata And SEO

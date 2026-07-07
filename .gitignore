@@ -43,3 +43,6 @@ next-env.d.ts
 # continual learning (local state, not shared memory)
 .cursor/continual-learning-log.txt
 .cursor/hooks/state/
+
+# raw resume with private contact details (root only; sanitized copy in public/ is allowed)
+/ronnie-scott-resume.pdf

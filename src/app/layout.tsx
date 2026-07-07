@@ -15,9 +15,18 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ronnie | Software Engineer",
+  metadataBase: new URL("https://dev-ron.com"),
+  title: {
+    default: "Ronnie Scott — Full-Stack Software Engineer",
+    template: "%s | Ronnie Scott",
+  },
   description:
-    "Portfolio showcasing technical projects, open-source work, and professional experience.",
+    "Full-stack software engineer building practical, accessible software, developer tooling, and AI-assisted workflows. Six years of startup experience shipping production software end to end.",
+  openGraph: {
+    siteName: "Ronnie Scott",
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

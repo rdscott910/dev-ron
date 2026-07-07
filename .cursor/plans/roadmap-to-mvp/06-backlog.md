@@ -2,10 +2,12 @@
 
 These ideas are valuable, but they should not block the MVP unless the user explicitly promotes them.
 
+Note: many items below were promoted into the post-MVP roadmap in July 2026. See `08-post-mvp-roadmap.md` and `09-post-mvp-slices.md` for the active plan; items remaining here are still unscheduled.
+
 ## Professional Artifacts
 
-- Resume page or embedded resume viewer.
-- Downloadable resume PDF.
+- Resume page or embedded resume viewer using `ronnie-scott-resume.pdf`.
+- Downloadable resume PDF, after removing the phone number and confirming any other contact details to redact.
 - Case study pages for selected projects.
 - Talks, writing samples, certifications, or work samples.
 - Timeline of professional milestones.
@@ -13,6 +15,7 @@ These ideas are valuable, but they should not block the MVP unless the user expl
 ## Projects
 
 - Project detail pages.
+- AI Orchestration Methodology / AI Orchestration Server case study.
 - GitHub API integration for stars, languages, and repository metadata.
 - Screenshots or videos for each project.
 - Featured project case studies.
@@ -21,6 +24,9 @@ These ideas are valuable, but they should not block the MVP unless the user expl
 ## Blog And Publishing
 
 - MDX blog posts.
+- Agentic orchestration article series.
+- AI headlines and commentary format.
+- Tech review format.
 - RSS feed.
 - Syntax highlighting.
 - Draft and published post workflow.
@@ -40,6 +46,9 @@ These ideas are valuable, but they should not block the MVP unless the user expl
 - Backend contact form handling.
 - Spam protection.
 - Email notifications.
+- Professional domain email alias, such as `hello@<domain>`, `contact@<domain>`, or `ronnie@<domain>`.
+- Transactional email delivery through a provider such as Resend.
+- Managed form provider evaluation.
 - Calendar booking link.
 - CRM or Notion task capture.
 
@@ -48,7 +57,7 @@ These ideas are valuable, but they should not block the MVP unless the user expl
 - Dark mode toggle.
 - Animation system that respects `prefers-reduced-motion`.
 - Custom illustrations.
-- More expressive visual identity.
+- More expressive visual identity based on vintage, Solarized light, gray, and muted color cues.
 - Command menu or quick navigation.
 
 ## SEO, Analytics, And Launch
@@ -64,7 +73,7 @@ These ideas are valuable, but they should not block the MVP unless the user expl
 
 - Preferred headline and tagline.
 - Real project list and priority order.
-- Resume PDF or resume content.
-- Preferred contact email.
-- Blog topics or first post ideas.
+- Approval for which resume details should be public.
+- Preferred professional email alias after domain selection.
+- First 3-5 blog post ideas within agentic orchestration, AI headlines, or tech reviews.
 - Any professional artifacts that should appear in the first post-MVP iteration.
