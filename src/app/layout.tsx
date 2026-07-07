@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import "./globals.css";
@@ -26,6 +27,21 @@ export const metadata: Metadata = {
     siteName: "Ronnie Scott",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 675,
+        alt: "dev-ron — Ronnie Scott, Full-Stack Software Engineer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ronnie Scott — Full-Stack Software Engineer",
+    description:
+      "Full-stack software engineer building practical, accessible software, developer tooling, and AI-assisted workflows.",
+    images: ["/og.png"],
   },
 };
 
@@ -42,6 +58,7 @@ export default function RootLayout({
         <Header />
         <main className="min-h-[calc(100dvh-8rem)]">{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
