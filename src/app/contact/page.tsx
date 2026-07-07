@@ -110,25 +110,18 @@ export default function ContactPage() {
         </ul>
       </div>
 
-      {/* Non-submitting form shell */}
+      {/* Contact form */}
       <div className="mt-12 rounded-xl border border-border bg-card px-6 py-8">
         <h2 className="mb-1 text-base font-semibold text-foreground">
           Send a message
         </h2>
         <p className="mb-6 text-sm leading-relaxed text-muted-foreground">
-          <strong className="font-medium text-foreground">
-            Note: this form is not wired yet.
-          </strong>{" "}
-          Until email delivery is configured, please reach out directly through
-          LinkedIn or GitHub above.
+          Fill this out and it lands straight in my inbox. Prefer another
+          channel? LinkedIn and GitHub work too.
         </p>
 
         <ContactForm />
       </div>
-
-      <p className="mt-8 text-center text-sm text-muted-foreground">
-        A professional email address is coming soon.
-      </p>
     </section>
   );
 }

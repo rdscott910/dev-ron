@@ -90,3 +90,20 @@ Confirm the preferred professional email alias before placing an email address p
 - Resume: sanitize the existing `ronnie-scott-resume.pdf` by stripping the phone number; the sanitized copy becomes the public asset. The raw PDF must stay gitignored.
 - Analytics: Vercel Analytics.
 - Deployment: Vercel, production domain `https://dev-ron.com`.
+
+## Contact Delivery Setup (Phase 7)
+
+Implemented in code:
+
+- Server action `src/app/contact/actions.ts` sends form submissions via Resend from `contact@dev-ron.com` to `ronnie@dev-ron.com`, with reply-to set to the submitter.
+- Spam protection: hidden honeypot field plus a per-email in-memory rate limit (one message per minute; best-effort on serverless).
+- If `RESEND_API_KEY` is unset the action returns a friendly error pointing to LinkedIn/GitHub, so the form degrades gracefully.
+- Sanitized resume (phone stripped at the PDF content-stream level) lives at `public/ronnie-scott-resume.pdf` and is linked from the About artifacts block. The raw resume at the repo root stays gitignored.
+
+User dashboard steps required before delivery works:
+
+1. Namecheap → Domain → Redirect Email: forward `ronnie@dev-ron.com` to the private inbox (requires Namecheap DNS, which we kept).
+2. Resend dashboard → Domains: add `dev-ron.com` and copy the DKIM/SPF records into Namecheap Advanced DNS; wait for verification so `contact@dev-ron.com` can send.
+3. Resend dashboard → API Keys: create a key; put it in `.env.local` as `RESEND_API_KEY` and add the same variable in Vercel project settings (Production).
+
+Once forwarding is confirmed working, `ronnie@dev-ron.com` may be displayed publicly on the contact page.

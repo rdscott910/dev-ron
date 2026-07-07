@@ -114,8 +114,8 @@ export function About() {
           Professional artifacts
         </h2>
         <p className="mb-6 text-sm text-muted-foreground">
-          Resume, case studies, and additional work samples coming soon.
-          Interested in working together?{" "}
+          Case studies and additional work samples coming soon. Interested in
+          working together?{" "}
           <Link
             href="/contact"
             className="font-medium text-foreground underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
@@ -125,7 +125,16 @@ export function About() {
           .
         </p>
         <ul className="grid gap-3 sm:grid-cols-3">
-          {["Resume", "Case Studies", "Writing Samples"].map((item) => (
+          <li>
+            <a
+              href="/ronnie-scott-resume.pdf"
+              download
+              className="block rounded-lg border border-border bg-card px-4 py-3 text-sm font-medium text-foreground transition-colors hover:border-foreground/30 hover:bg-muted/50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
+            >
+              Resume <span className="text-xs opacity-60">— download PDF</span>
+            </a>
+          </li>
+          {["Case Studies", "Writing Samples"].map((item) => (
             <li
               key={item}
               className="rounded-lg border border-border bg-card px-4 py-3 text-sm text-muted-foreground"
