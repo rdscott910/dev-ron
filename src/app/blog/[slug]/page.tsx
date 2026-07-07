@@ -52,7 +52,7 @@ export default async function PostPage({ params }: PostPageProps) {
     <article className="mx-auto max-w-2xl px-6 py-24">
       <header className="mb-10">
         {post.status !== "published" && (
-          <p className="mb-4 inline-flex items-center rounded-full bg-[#b58900]/15 px-2.5 py-0.5 text-xs font-medium text-[#6b5300]">
+          <p className="mb-4 inline-flex items-center rounded-full bg-[#b58900]/15 px-2.5 py-0.5 text-xs font-medium text-[#6b5300] dark:bg-[#b58900]/20 dark:text-[#d9b13a]">
             Draft preview — visible in development only
           </p>
         )}

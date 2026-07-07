@@ -31,7 +31,7 @@ export const CAREER: CareerEntry[] = [
   {
     role: "Software Engineer (Contract)",
     org: "Virnika",
-    period: "March 2024 – Present",
+    period: "March 2024 – March 2025",
     location: "Remote",
     highlights: [
       "Integrated an AI-powered restaurant phone-ordering platform with 20+ point-of-sale systems through Deliverect's channel integration.",

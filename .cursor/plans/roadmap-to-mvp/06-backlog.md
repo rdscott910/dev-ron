@@ -2,7 +2,7 @@
 
 These ideas are valuable, but they should not block the MVP unless the user explicitly promotes them.
 
-Note: the post-MVP roadmap (`08-post-mvp-roadmap.md`) completed in July 2026. Items remaining here are unscheduled future work: RSS feed, newsletter signup, embedded apps gallery, dark mode toggle, GitHub API integration, project screenshots, search/tag archives, calendar booking, structured data, and Lighthouse performance budget.
+Note: the post-MVP roadmap (`08-post-mvp-roadmap.md`) completed in July 2026, and the dark mode toggle shipped shortly after (Solarized Dark + next-themes). Items remaining here are unscheduled future work: RSS feed, newsletter signup, embedded apps gallery, GitHub API integration, project screenshots, search/tag archives, calendar booking, structured data, and Lighthouse performance budget.
 
 ## Professional Artifacts
 
