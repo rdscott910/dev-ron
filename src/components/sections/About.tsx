@@ -126,13 +126,12 @@ export function About() {
         </p>
         <ul className="grid gap-3 sm:grid-cols-3">
           <li>
-            <a
-              href="/ronnie-scott-resume.pdf"
-              download
+            <Link
+              href="/resume"
               className="block rounded-lg border border-border bg-card px-4 py-3 text-sm font-medium text-foreground transition-colors hover:border-foreground/30 hover:bg-muted/50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
             >
-              Resume <span className="text-xs opacity-60">— download PDF</span>
-            </a>
+              Resume <span className="text-xs opacity-60">— timeline & PDF</span>
+            </Link>
           </li>
           {["Case Studies", "Writing Samples"].map((item) => (
             <li
