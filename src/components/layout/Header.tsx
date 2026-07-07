@@ -2,6 +2,9 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+import { cn } from "@/lib/utils";
 
 const NAV_LINKS = [
   { href: "/projects", label: "Projects" },
@@ -12,6 +15,10 @@ const NAV_LINKS = [
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  const isActive = (href: string) =>
+    pathname === href || pathname.startsWith(`${href}/`);
 
   return (
     <header className="sticky top-0 z-50 border-b border-foreground/10 bg-background/80 backdrop-blur-md">
@@ -23,7 +30,7 @@ export function Header() {
           href="/"
           className="text-lg font-bold tracking-tight text-foreground"
         >
-          Ronnie.dev
+          dev-ron
         </Link>
 
         {/* Desktop nav */}
@@ -32,7 +39,13 @@ export function Header() {
             <li key={href}>
               <Link
                 href={href}
-                className="text-sm font-medium text-foreground/70 transition-colors hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-foreground"
+                aria-current={isActive(href) ? "page" : undefined}
+                className={cn(
+                  "text-sm font-medium transition-colors hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-foreground",
+                  isActive(href)
+                    ? "text-foreground underline decoration-foreground/40 underline-offset-8"
+                    : "text-foreground/70",
+                )}
               >
                 {label}
               </Link>
@@ -93,7 +106,13 @@ export function Header() {
               <li key={href}>
                 <Link
                   href={href}
-                  className="block rounded-md px-3 py-2 text-sm font-medium text-foreground/70 transition-colors hover:bg-foreground/5 hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
+                  aria-current={isActive(href) ? "page" : undefined}
+                  className={cn(
+                    "block rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-foreground/5 hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground",
+                    isActive(href)
+                      ? "bg-foreground/5 text-foreground"
+                      : "text-foreground/70",
+                  )}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {label}

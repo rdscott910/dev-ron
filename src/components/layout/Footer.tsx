@@ -18,7 +18,7 @@ export function Footer() {
             href="/"
             className="text-sm font-semibold tracking-tight text-foreground/70 transition-colors hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-foreground"
           >
-            Ronnie.dev
+            dev-ron
           </Link>
 
           <nav aria-label="Footer navigation">
