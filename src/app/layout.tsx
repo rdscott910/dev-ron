@@ -37,7 +37,7 @@ export const metadata: Metadata = {
       {
         url: "/og.png",
         width: 1200,
-        height: 675,
+        height: 630,
         alt: "dev-ron — Ronnie Scott, Full-Stack Software Engineer",
       },
     ],
