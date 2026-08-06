@@ -18,6 +18,31 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
+    title: "NC SNAP Benefits Eligibility Agent",
+    slug: "benefits-eligibility-agent",
+    summary:
+      "A grounded, glass-box chat agent that estimates North Carolina FNS (SNAP) eligibility likelihood from curated policy documents — with guardrails, deterministic math tools, and clickable citations. Built for a voice-AI company's case-study interview.",
+    problem:
+      "Benefit-eligibility questions mix messy user input with safety-critical rules. A helpful model that invents a limit, or computes a threshold wrong, is worse than a clear referral to the county DSS.",
+    role: "Sole author — architecture, guardrail pipeline, grounded RAG, deterministic tools, eval harness, and public demo deploy.",
+    stack: [
+      "TypeScript",
+      "React",
+      "Express",
+      "Vercel AI SDK",
+      "OpenAI",
+      "Zod",
+      "Vitest",
+    ],
+    status: "shipped",
+    links: {
+      github: "https://github.com/rdscott910/Benefits-Eligibility-Agent",
+      live: "https://demo.dev-ron.com",
+      caseStudy: "/projects/benefits-eligibility-agent",
+    },
+    featured: true,
+  },
+  {
     title: "AI Orchestration Server",
     slug: "ai-orchestration-server",
     summary:

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { BookOpen, ExternalLink, Github } from "lucide-react";
 
 import { getFeaturedProjects } from "@/lib/projects";
 import { getWritingPreview } from "@/lib/blog";
@@ -80,44 +81,74 @@ export default function Home() {
           </Button>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2">
-          {getFeaturedProjects().map((project) => (
-            <Card key={project.slug} className="flex flex-col">
-              <CardHeader className="flex-1">
-                <div className="mb-1">
-                  <span className="text-xs font-medium text-muted-foreground">
-                    {STATUS_LABELS[project.status] ?? project.status}
-                  </span>
-                </div>
-                <CardTitle className="text-lg">{project.title}</CardTitle>
-                <CardDescription className="leading-relaxed">
-                  {project.summary}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-1.5">
-                  {project.stack.map((tech) => (
-                    <Badge key={tech} variant="secondary" className="text-xs">
-                      {tech}
-                    </Badge>
-                  ))}
-                </div>
-              </CardContent>
-              {project.links.github && (
-                <CardFooter>
-                  <Button variant="outline" size="sm" asChild>
-                    <a
-                      href={project.links.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      View on GitHub
-                    </a>
-                  </Button>
-                </CardFooter>
-              )}
-            </Card>
-          ))}
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {getFeaturedProjects().map((project) => {
+            const hasFooter =
+              Boolean(project.links.github) ||
+              Boolean(project.links.live) ||
+              Boolean(project.links.caseStudy);
+
+            return (
+              <Card key={project.slug} className="flex flex-col">
+                <CardHeader className="flex-1">
+                  <div className="mb-1">
+                    <span className="text-xs font-medium text-muted-foreground">
+                      {STATUS_LABELS[project.status] ?? project.status}
+                    </span>
+                  </div>
+                  <CardTitle className="text-lg">{project.title}</CardTitle>
+                  <CardDescription className="leading-relaxed">
+                    {project.summary}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-1.5">
+                    {project.stack.map((tech) => (
+                      <Badge key={tech} variant="secondary" className="text-xs">
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+                </CardContent>
+                {hasFooter ? (
+                  <CardFooter className="flex flex-wrap gap-2">
+                    {project.links.github ? (
+                      <Button variant="outline" size="sm" asChild>
+                        <a
+                          href={project.links.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Github className="mr-1.5 h-3.5 w-3.5" />
+                          GitHub
+                        </a>
+                      </Button>
+                    ) : null}
+                    {project.links.live ? (
+                      <Button variant="outline" size="sm" asChild>
+                        <a
+                          href={project.links.live}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <ExternalLink className="mr-1.5 h-3.5 w-3.5" />
+                          Live Demo
+                        </a>
+                      </Button>
+                    ) : null}
+                    {project.links.caseStudy ? (
+                      <Button variant="outline" size="sm" asChild>
+                        <Link href={project.links.caseStudy}>
+                          <BookOpen className="mr-1.5 h-3.5 w-3.5" />
+                          Case Study
+                        </Link>
+                      </Button>
+                    ) : null}
+                  </CardFooter>
+                ) : null}
+              </Card>
+            );
+          })}
         </div>
       </section>
 

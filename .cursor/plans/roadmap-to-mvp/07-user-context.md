@@ -39,16 +39,20 @@ For MVP, use draft-style article cards around these themes. Cards should feel in
 
 ## Featured Project Guidance
 
-The final featured project list is still TBD.
+Known projects to include:
 
-Known project to include:
-
+- NC SNAP Benefits Eligibility Agent (shipped case study + public demo).
+  - Repo: `https://github.com/rdscott910/Benefits-Eligibility-Agent`
+  - Live demo: `https://demo.dev-ron.com` (also `https://benefits-eligibility-agent.vercel.app`)
+  - Case study: `/projects/benefits-eligibility-agent`
+  - Built for a voice-AI company's case-study interview; do not name the company in public copy.
+  - Neutral public branding; portfolio demo only — not an official eligibility determination.
 - AI Orchestration Methodology / AI Orchestration Server.
   - Repo: `https://github.com/rdscott910/ai-orchestration-server`
   - Status: incomplete / in progress.
   - Position as an evolving methodology and toolchain for coordinating AI-assisted workflows, not as a finished commercial product.
 
-Agents should not invent a full case study until the user provides more details.
+Agents should not invent metrics beyond the Benefits Agent README eval report (regenerated 2026-08-06).
 
 ## Visual Direction
 
@@ -118,3 +122,4 @@ Placeholders shipped in July 2026 awaiting real content from the user. Each entr
 4. `src/app/methodology/page.tsx` — "Deep dives" list is Coming Soon. Replace with real architecture walkthrough, changelog, and site case study as they're written.
 5. `src/components/sections/About.tsx` — music corner "Recordings and projects coming soon" block. Replace with real links/embeds when provided.
 6. `src/components/sections/About.tsx` — "Writing Samples — coming soon" artifact card. Point at published posts once they exist.
+7. `content/blog/nc-snap-benefits-eligibility-agent.mdx` — draft scaffold with section prompts. Replace prompts with real prose, set `status: published` to go live (dev preview at `/blog/nc-snap-benefits-eligibility-agent`).

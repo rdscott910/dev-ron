@@ -1,0 +1,43 @@
+---
+title: "Building a Grounded SNAP Eligibility Agent"
+slug: nc-snap-benefits-eligibility-agent
+description: "How a case-study chat agent estimates NC FNS likelihood with guardrails, corpus grounding, deterministic math, and a glass-box trace — without pretending to determine eligibility."
+date: "2026-08-06"
+tags: ["ai-agents", "typescript", "grounding", "public-benefits"]
+series: "Agentic Orchestration"
+status: draft
+---
+
+*Draft scaffold — each section below has a prompt describing what belongs
+there. Replace the prompts with real prose, then set `status: published`.
+Pair with the case study at `/projects/benefits-eligibility-agent`.*
+
+## Why likelihood, not determination
+
+Prompt: explain the product constraint in your own words — only county DSS
+can determine eligibility, why that bound the architecture, and how mandatory
+referral language is enforced in the UI rather than left to the model.
+
+## Guardrails before the agent
+
+Prompt: walk through Stage 1 sanitize + Stage 2 classify, precedence
+(crisis first), fail-closed behavior, and one collision example from the
+eval suite that surprised you (or confirmed the design).
+
+## Grounding without a database
+
+Prompt: why six dated markdown snapshots and an in-memory store beat a hosted
+vector DB for this scale; how the cosine threshold and honest no-match path
+interact; link to the live demo citations UX.
+
+## Deterministic tools and messy input
+
+Prompt: CaseFile memory, why the model never computes, and how vague income /
+contradictions are handled so a guess never becomes a verdict. Point at the
+glass-box drawer.
+
+## What I would change for production
+
+Prompt: honest follow-ups — corpus freshness process, abuse controls for a
+public demo, what voice would require if you ever added it, and how this
+project exercised the same truth-stack methodology as `/methodology`.

@@ -23,6 +23,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/now`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.5 },
     { url: `${base}/uses`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.5 },
     { url: `${base}/methodology`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+    {
+      url: `${base}/projects/benefits-eligibility-agent`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
     { url: `${base}/contact`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.5 },
     ...postEntries,
   ];

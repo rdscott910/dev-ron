@@ -8,7 +8,7 @@ Note: the post-MVP roadmap (`08-post-mvp-roadmap.md`) completed in July 2026, an
 
 - Resume page or embedded resume viewer using `ronnie-scott-resume.pdf`.
 - Downloadable resume PDF, after removing the phone number and confirming any other contact details to redact.
-- Case study pages for selected projects.
+- Case study pages for selected projects. *(NC SNAP Benefits Eligibility Agent shipped at `/projects/benefits-eligibility-agent`, 2026-08.)*
 - Talks, writing samples, certifications, or work samples.
 - Timeline of professional milestones.
 
@@ -17,8 +17,8 @@ Note: the post-MVP roadmap (`08-post-mvp-roadmap.md`) completed in July 2026, an
 - Project detail pages.
 - AI Orchestration Methodology / AI Orchestration Server case study.
 - GitHub API integration for stars, languages, and repository metadata.
-- Screenshots or videos for each project.
-- Featured project case studies.
+- Screenshots or videos for each project. *(Benefits agent screenshots shipped under `public/projects/benefits-eligibility-agent/`.)*
+- Featured project case studies. *(Benefits agent featured + case study shipped.)*
 - Project filtering by technology or type.
 
 ## Blog And Publishing
